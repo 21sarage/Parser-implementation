@@ -45,11 +45,17 @@ lo statement 'foreach' IDENT 'in' Exp Block
 ### Regole della semantica statica
 
 il literal '[' Exp1 ';' Exp2 ']' è corretto e ha tipo vector se Exp1 e Exp2 hanno tipo int
+
 l'espressione Exp1 '+' Exp2 è corretta e ha tipo int se Exp1 e Exp2 hanno tipo int
+
 l'espressione Exp1 '+' Exp2 è corretta e ha tipo vector se Exp1 e Exp2 hanno tipo vector
+
 l'espressione Exp1 '*' Exp2 è corretta e ha tipo int se Exp1 e Exp2 hanno tipo int
+
 l'espressione Exp1 '*' Exp2 è corretta e ha tipo int se Exp1 e Exp2 hanno tipo vector
+
 l'espressione Exp1 '*' Exp2 è corretta e ha tipo vector se Exp1 ha tipo inte Exp2 ha tipo vector oppure Exp1 ha tipo vectore Exp2 ha tipo int
+
 lo statement 'foreach' IDENT 'in' Exp Block è corretto se Exp ha tipo vector rispetto all'ambiente corrente env e Block è corretto rispetto all'ambiente ottenuto aggiungendo a env un nuovo scope annidato dove l'unica variabile dichiarata è IDENT di tipo int.
 
 ### Regole della semantica dinamica
