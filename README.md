@@ -15,6 +15,7 @@ Il linguaggio contiene le nuove parole chiave foreach e in e i nuovi simboli [ e
 
 La sintassi del linguaggio è definita da questa grammatica in forma EBNF:
 
+'''
 Prog ::= StmtSeq EOF
 
 StmtSeq ::= Stmt (';' StmtSeq)?
@@ -34,6 +35,7 @@ Add ::= Mul ('+' Mul)*
 Mul::= Atom ('*' Atom)*
 
 Atom ::= 'fst' Atom | 'snd' Atom | '-' Atom | '!' Atom | BOOL | NUM | IDENT | '(' Exp ')' | '[' Exp ';' Exp ']' 
+'''
 
 La grammatica non richiede trasformazioni e può essere utilizzata così com'è per sviluppare un parser per il linguaggio con un solo token di lookahead.
 
