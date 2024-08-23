@@ -64,21 +64,33 @@ se Exp1 e Exp2 si valutano negli interi ind e dim, allora '[' Exp1 ';' Exp2 ']' 
 Esempio
 
 print [3;5]
+
 stampa
 
 [0;0;0;1;0]
+
 se Exp1 e Exp2 si valutano negli interi i1 e i2, allora Exp1'+'Exp2 si valuta nell'intero i1+i2
+
 se Exp1 e Exp2 si valutano nei vettori v1 e v2, allora Exp1'+'Exp2 si valuta nel vettore v1+v2; viene sollevata un'eccezione se i due vettori non hanno la stessa dimensione. La somma di vettori è definita da
+
 [a_0;...;a_n]+[b_0;...;b_n]=[a_0+b_0;...;a_n+b_n]
+
 se Exp1 e Exp2 si valutano negli interi i1 e i2, allora Exp1'*'Exp2 si valuta nell'intero i1*i2
+
 se Exp1 e Exp2 si valutano nei vettori v1 e v2, allora Exp1'*'Exp2 si valuta nell'intero ottenuto dal prodotto scalare di v1 e v2; viene sollevata un'eccezione se i due vettori non hanno la stessa dimensione. Il prodotto scalare di vettori è definito da
+
 [a_0;...;a_n]*[b_0;...;b_n]=a_0*b_0+...+a_n*b_n
+
 se Exp1 e Exp2 si valutano in un intero i e in un vettore v, o viceversa, allora Exp1'*'Exp2 si valuta nel vettore ottenuto dal prodotto misto tra i e v. Il prodotto misto tra un intero e un vettore è definito da
+
 i*[a_0;...;a_n]=[a_0;...;a_n]*i= [i*a_0;...;i*a_n]
+
 l'esecuzione dello statement 'foreach' IDENT 'in' Exp Block consiste nella valutazione dell'espressione Exp rispetto all'ambiente corrente env; deve essere restituito un vettore v sui cui elementi viene iterata l'esecuzione di Block rispetto a un ambiente ottenuto da env aggiungendo uno scope annidato contenente la sola variabile IDENT alla quale viene assegnato a ogni iterazione un elemento di v in ordine dall'indice minimo al massimo. Inizialmente la variabile  IDENT viene inizializzata con un valore intero arbitrario.
+
 Esempio:
 
 foreach i in [0;3]+2*[1;3]+3*[2;3]{print i}
+
 stampa
 
 1
