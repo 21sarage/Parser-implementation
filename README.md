@@ -1,4 +1,4 @@
-# Implementazione di un parser in Java per un semplice linguaggio
+# Implementazione di un parser in Java per un semplice linguaggio di programmazione
 
 Il progetto consiste nell'implementazione di un'estensione del linguaggio sviluppato durante gli ultimi laboratori Java nel corso di LPO dell'Università di Genova.
 
